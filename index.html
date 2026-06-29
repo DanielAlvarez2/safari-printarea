@@ -33,8 +33,7 @@
 <body>
     <div id="paper" class="letter">
         <div id="size" onclick="toggleSize()">
-            Letter<br/>
-            Paper<br/>
+            Letter Paper<br/>
             width:190mm<br/>
             height:242mm
         </div>
@@ -46,15 +45,13 @@
             if (letter){
                 document.querySelector('#paper').classList.remove('letter')
                 document.querySelector('#paper').classList.add('legal')
-                document.querySelector('#size').innerHTML = `Legal<br/>
-            Paper<br/>
+                document.querySelector('#size').innerHTML = `Legal Paper<br/>
             width:190mm<br/>
             height:356mm`
             }else{
                 document.querySelector('#paper').classList.remove('legal')
                 document.querySelector('#paper').classList.add('letter')
-                document.querySelector('#size').innerHTML = `Letter<br/>
-            Paper<br/>
+                document.querySelector('#size').innerHTML = `Letter Paper<br/>
             width:190mm<br/>
             height:242mm`
             }
