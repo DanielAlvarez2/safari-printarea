@@ -32,16 +32,31 @@
 </head>
 <body>
     <div id="paper" class="letter">
-        <div id="size" onclick="toggleSize">Letter<br/>Paper</div>
+        <div id="size" onclick="toggleSize()">
+            Letter<br/>
+            Paper<br/>
+            width:190mm<br/>
+            height:242mm
+        </div>
     </div>
     <script>
         let letter = true
 
         function toggleSize(){
             if (letter){
-
+                document.querySelector('#paper').classList.remove('letter')
+                document.querySelector('#paper').classList.add('legal')
+                document.querySelector('#size').innerHTML = `Legal<br/>
+            Paper<br/>
+            width:190mm<br/>
+            height:356mm`
             }else{
-
+                document.querySelector('#paper').classList.remove('legal')
+                document.querySelector('#paper').classList.add('letter')
+                document.querySelector('#size').innerHTML = `Letter<br/>
+            Paper<br/>
+            width:190mm<br/>
+            height:242mm`
             }
             letter = !letter
         }
